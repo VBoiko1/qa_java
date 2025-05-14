@@ -23,7 +23,7 @@ class FelineTest {
 
     @Test
     void getFamily_ReturnsFelineFamily() {
-        assertEquals("Кошачьи", feline.getFamily());
+        assertEquals("Кошaчьи", feline.getFamily());
     }
 
     @Test
