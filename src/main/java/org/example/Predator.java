@@ -1,5 +1,5 @@
 package org.example;
-
+import java.util.List;
 import java.util.List;
 
 public interface Predator {
