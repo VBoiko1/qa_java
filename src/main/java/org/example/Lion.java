@@ -3,12 +3,11 @@ package org.example;
 import java.util.List;
 
 public class Lion {
-
     private final boolean hasMane;
-    private final Predator predator; // Зависимость через интерфейс
+    private final Feline feline; // Зависимость через конкретный класс Feline
 
-    public Lion(String sex, Predator predator) throws Exception {
-        this.predator = predator;
+    public Lion(String sex, Feline feline) throws Exception {
+        this.feline = feline;
         if ("Самец".equals(sex)) {
             this.hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -19,10 +18,7 @@ public class Lion {
     }
 
     public int getKittens() {
-        if (predator instanceof Feline) {
-            return ((Feline) predator).getKittens();
-        }
-        return 0; // Или другое поведение по умолчанию
+        return feline.getKittens(); // Прямой вызов метода Feline
     }
 
     public boolean doesHaveMane() {
@@ -30,6 +26,6 @@ public class Lion {
     }
 
     public List<String> getFood() throws Exception {
-        return predator.eatMeat(); // Используем метод интерфейса
+        return feline.eatMeat(); // Прямой вызов метода Feline
     }
 }
