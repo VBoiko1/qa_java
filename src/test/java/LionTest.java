@@ -21,7 +21,7 @@ class LionTest {
 
     @Test
     void constructor_WithFemale_SetsHasManeFalse() throws Exception {
-        Lion lion = new Lion("Самка", mockFeline);
+        Lion lion = new Lion("Сaмка", mockFeline);
         assertFalse(lion.doesHaveMane());
     }
 
