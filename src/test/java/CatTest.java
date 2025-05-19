@@ -29,7 +29,7 @@ class CatTest {
     @Test
     void getSound_ReturnsMeow() {
 
-        assertEquals("Мяy", cat.getSound());
+        assertEquals("Мяу", cat.getSound());
     }
 
     @Test

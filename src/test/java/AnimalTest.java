@@ -16,7 +16,7 @@ class AnimalTest {
     @Test
     void getFood_ForHerbivore_ReturnsPlants() throws Exception {
         Animal animal = new Animal();
-        List<String> expected = List.of("Трaва", "Различные растения");
+        List<String> expected = List.of("Трава", "Различные растения");
         assertEquals(expected, animal.getFood("Травоядное"));
     }
 
